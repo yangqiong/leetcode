@@ -7,3 +7,4 @@ mod e112_path_sum;
 mod e144_binary_tree_preorder_traversal;
 mod e145_binary_tree_postorder_traversal;
 mod e226_invert_binary_tree;
+mod e235_lowest_common_ancestor_of_a_binary_search_tree;
