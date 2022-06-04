@@ -11,4 +11,5 @@ mod e1_two_sum;
 mod e226_invert_binary_tree;
 mod e235_lowest_common_ancestor_of_a_binary_search_tree;
 mod e257_binary_tree_paths;
+mod e2_add_two_numbers;
 mod e506_relative_ranks;
