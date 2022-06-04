@@ -1,4 +1,7 @@
-use core::num;
+// https://leetcode.cn/problems/add-two-numbers/
+// 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
+// 请你将两个数相加，并以相同形式返回一个表示和的链表。
+// 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -20,65 +23,30 @@ impl Solution {
         l1: Option<Box<ListNode>>,
         l2: Option<Box<ListNode>>,
     ) -> Option<Box<ListNode>> {
-        let mut nums: Vec<i32> = Vec::new();
-        let mut plus = 0;
-        let mut cur1 = l1.as_ref();
-        let mut cur2 = l2.as_ref();
+        Self::dfs(l1, l2, 0)
+    }
 
-        while cur1.is_some() && cur2.is_some() {
-            let val1 = cur1.unwrap().val;
-            let val2 = cur2.unwrap().val;
-            let sum = val1 + val2 + plus;
-            if sum >= 10 {
-                nums.push(sum - 10);
-                plus = 1;
-            } else {
-                nums.push(sum);
-                plus = 0;
-            }
-            cur1 = cur1.unwrap().next.as_ref();
-            cur2 = cur2.unwrap().next.as_ref();
+    fn dfs(
+        l1: Option<Box<ListNode>>,
+        l2: Option<Box<ListNode>>,
+        mut carried: i32,
+    ) -> Option<Box<ListNode>> {
+        if l1.is_none() && l2.is_none() && carried == 0 {
+            return None;
         }
-
-        while cur1.is_some() {
-            let val1 = cur1.unwrap().val;
-            let sum = val1 + plus;
-            if sum >= 10 {
-                nums.push(sum - 10);
-                plus = 1;
-            } else {
-                nums.push(sum);
-                plus = 0;
-            }
-            cur1 = cur1.unwrap().next.as_ref();
-        }
-
-        while cur2.is_some() {
-            let val2 = cur2.unwrap().val;
-            let sum = val2 + plus;
-            if sum >= 10 {
-                nums.push(sum - 10);
-                plus = 1;
-            } else {
-                nums.push(sum);
-                plus = 0;
-            }
-            cur2 = cur2.unwrap().next.as_ref();
-        }
-
-        if plus == 1 {
-            nums.push(plus);
-        }
-
-        nums.reverse();
-
-        let mut head = None;
-        for i in 0..nums.len() {
-            let mut node = ListNode::new(nums[i]);
-            node.next = head;
-            head = Some(Box::new(node))
-        }
-
-        head
+        Some(Box::new(ListNode {
+            next: Self::dfs(
+                l1.and_then(|x| {
+                    carried += x.val;
+                    x.next
+                }),
+                l2.and_then(|x| {
+                    carried += x.val;
+                    x.next
+                }),
+                carried / 10,
+            ),
+            val: carried % 10,
+        }))
     }
 }
