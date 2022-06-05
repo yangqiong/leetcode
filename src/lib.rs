@@ -15,3 +15,4 @@ mod e257_binary_tree_paths;
 mod e2_add_two_numbers;
 mod e3_longest_substring_without_repeating_characters;
 mod e506_relative_ranks;
+mod e94_binary_tree_inorder_traversal;
