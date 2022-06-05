@@ -10,6 +10,7 @@ mod e144_binary_tree_preorder_traversal;
 mod e145_binary_tree_postorder_traversal;
 mod e1_two_sum;
 mod e20_valid_parentheses;
+mod e21_merge_two_sorted_lists;
 mod e226_invert_binary_tree;
 mod e235_lowest_common_ancestor_of_a_binary_search_tree;
 mod e257_binary_tree_paths;
