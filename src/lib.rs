@@ -21,4 +21,5 @@ mod e461_hamming_distance;
 mod e477_total_hamming_distance;
 mod e506_relative_ranks;
 mod e704_binary_search;
+mod e903_k_closest_points_to_origin;
 mod e94_binary_tree_inorder_traversal;
