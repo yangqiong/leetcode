@@ -20,4 +20,5 @@ mod e3_longest_substring_without_repeating_characters;
 mod e461_hamming_distance;
 mod e477_total_hamming_distance;
 mod e506_relative_ranks;
+mod e704_binary_search;
 mod e94_binary_tree_inorder_traversal;
