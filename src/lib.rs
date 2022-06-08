@@ -21,6 +21,7 @@ mod e3_longest_substring_without_repeating_characters;
 mod e461_hamming_distance;
 mod e477_total_hamming_distance;
 mod e506_relative_ranks;
+mod e53_maximum_subarray;
 mod e704_binary_search;
 mod e707_design_linked_list;
 mod e903_k_closest_points_to_origin;
