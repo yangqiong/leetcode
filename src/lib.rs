@@ -11,6 +11,7 @@ mod e13_roman_to_integer;
 mod e144_binary_tree_preorder_traversal;
 mod e145_binary_tree_postorder_traversal;
 mod e155_min_stack;
+mod e169_majority_element;
 mod e1_two_sum;
 mod e203_remove_linked_list_elements;
 mod e20_valid_parentheses;
