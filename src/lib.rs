@@ -6,6 +6,7 @@ mod e110_balanced_binary_tree;
 mod e111_minimum_depth_of_binary_tree;
 mod e112_path_sum;
 mod e121_best_time_to_buy_and_sell_stock;
+mod e136_single_number;
 mod e13_roman_to_integer;
 mod e144_binary_tree_preorder_traversal;
 mod e145_binary_tree_postorder_traversal;
