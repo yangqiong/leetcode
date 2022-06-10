@@ -24,22 +24,35 @@ use std::mem::swap;
 use std::rc::Rc;
 struct Solution {}
 impl Solution {
-    pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
-        Self::invert_tree_node(root.as_ref());
-        root
-    }
+    // pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+    //     Self::invert_tree_node(root.as_ref());
+    //     root
+    // }
 
-    pub fn invert_tree_node(node: Option<&Rc<RefCell<TreeNode>>>) {
-        match node {
-            None => (),
-            Some(node) => {
-                let left = node.borrow_mut().left.take();
-                let right = node.borrow_mut().right.take();
-                node.borrow_mut().left = right;
-                node.borrow_mut().right = left;
-                Self::invert_tree_node(node.borrow().left.as_ref());
-                Self::invert_tree_node(node.borrow().right.as_ref());
-            }
+    // pub fn invert_tree_node(node: Option<&Rc<RefCell<TreeNode>>>) {
+    //     match node {
+    //         None => (),
+    //         Some(node) => {
+    //             let left = node.borrow_mut().left.take();
+    //             let right = node.borrow_mut().right.take();
+    //             node.borrow_mut().left = right;
+    //             node.borrow_mut().right = left;
+    //             Self::invert_tree_node(node.borrow().left.as_ref());
+    //             Self::invert_tree_node(node.borrow().right.as_ref());
+    //         }
+    //     }
+    // }
+
+    pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+        if let Some(rt) = root.clone() {
+            let mut node = rt.borrow_mut();
+            let left = node.left.take();
+            let right = node.right.take();
+            node.left = right.clone();
+            node.right = left.clone();
+            Self::invert_tree(left.clone());
+            Self::invert_tree(right.clone());
         }
+        root
     }
 }
