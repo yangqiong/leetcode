@@ -14,6 +14,7 @@ mod e155_min_stack;
 mod e169_majority_element;
 mod e1_two_sum;
 mod e203_remove_linked_list_elements;
+mod e206_reverse_linked_list;
 mod e20_valid_parentheses;
 mod e21_merge_two_sorted_lists;
 mod e2269_find_the_k_beauty_of_a_number;
