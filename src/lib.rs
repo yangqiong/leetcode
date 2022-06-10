@@ -23,6 +23,7 @@ mod e235_lowest_common_ancestor_of_a_binary_search_tree;
 mod e257_binary_tree_paths;
 mod e283_move_zeroes;
 mod e2_add_two_numbers;
+mod e338_counting_bits;
 mod e3_longest_substring_without_repeating_characters;
 mod e461_hamming_distance;
 mod e477_total_hamming_distance;
