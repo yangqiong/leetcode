@@ -29,6 +29,7 @@ mod e461_hamming_distance;
 mod e477_total_hamming_distance;
 mod e506_relative_ranks;
 mod e53_maximum_subarray;
+mod e617_merge_two_binary_trees;
 mod e704_binary_search;
 mod e707_design_linked_list;
 mod e70_climbing_stairs;
