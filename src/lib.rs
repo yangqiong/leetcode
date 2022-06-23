@@ -6,6 +6,7 @@ mod e110_balanced_binary_tree;
 mod e111_minimum_depth_of_binary_tree;
 mod e112_path_sum;
 mod e118_pascals_triangle;
+mod e119_pascals_triangle_ii;
 mod e11_container_with_most_water;
 mod e121_best_time_to_buy_and_sell_stock;
 mod e136_single_number;
