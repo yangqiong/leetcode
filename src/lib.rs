@@ -34,5 +34,6 @@ mod e617_merge_two_binary_trees;
 mod e704_binary_search;
 mod e707_design_linked_list;
 mod e70_climbing_stairs;
+mod e88_merge_sorted_array;
 mod e903_k_closest_points_to_origin;
 mod e94_binary_tree_inorder_traversal;
