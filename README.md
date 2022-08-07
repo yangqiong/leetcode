@@ -16,6 +16,20 @@
 
 # 算法
 
+## 广度优先遍历
+
+- 学习[广度优先遍历](https://leetcode.cn/leetbook/read/bfs/eqj8ps/)
+
+树的广度优先遍历的写法模式相对固定：
+
+- 使用队列
+- 在队列非空的时候，取出队列元素。（记住队列的长度）
+- 根据记住的队列长度遍历，并向队列中添加回子元素
+
+实例：
+
+1. [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+
 ## 深度优先遍历 （javascript）
 
 - 学习[深度优先遍历](https://leetcode.cn/leetbook/read/dfs/euoui2/)
